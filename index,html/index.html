@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HF MOBILE CARE - Premium mobile accessories in Sri Lanka. Earbuds, chargers, power banks, phone cases, smart watches and more.">
+<title>HF MOBILE CARE | Premium Mobile Accessories</title>
+<link rel="icon" type="image/jpeg" href="assets/hf-mobile-care-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======= TOP ANNOUNCEMENT BAR ======= -->
+<div class="top-bar">
+  <p><i class="fa-solid fa-truck-fast"></i> Free island-wide delivery on orders over LKR 5,000 &nbsp;|&nbsp; <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp: +94 77 000 0000</p>
+</div>
+
+<!-- ======= NAVIGATION ======= -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <img src="assets/hf-mobile-care-logo.jpg" alt="HF MOBILE CARE Logo" class="logo-img">
+      <span class="logo-text">HF <em>MOBILE CARE</em></span>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#shop" class="nav-link">Shop</a>
+      <a href="#categories" class="nav-link">Categories</a>
+      <a href="#new-arrivals" class="nav-link">New Arrivals</a>
+      <a href="#offers" class="nav-link">Offers</a>
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search products">
+        <button class="search-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <button class="cart-btn" id="cartBtn" aria-label="Shopping cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="login-btn" id="loginBtn"><i class="fa-solid fa-user"></i> Login</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ======= HERO ======= -->
+<section class="hero" id="home">
+  <div class="hero-bg-glow"></div>
+  <div class="hero-container">
+    <div class="hero-content reveal">
+      <img src="assets/hf-mobile-care-logo.jpg" alt="HF MOBILE CARE" class="hero-logo">
+      <h4 class="hero-brand">HF MOBILE CARE</h4>
+      <h1 class="hero-title">UPGRADE YOUR <span>MOBILE EXPERIENCE</span></h1>
+      <p class="hero-desc">Discover Premium Mobile Accessories. Quality, Style and Technology All in One Place.</p>
+      <div class="hero-btns">
+        <a href="#shop" class="btn-gold">SHOP NOW <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#categories" class="btn-outline">EXPLORE COLLECTION</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><h3>500+</h3><p>Products</p></div>
+        <div class="stat"><h3>2000+</h3><p>Happy Customers</p></div>
+        <div class="stat"><h3>4.9★</h3><p>Rating</p></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-img-ring">
+        <img src="assets/earbuds.jpg" alt="Premium wireless earbuds" class="hero-img main">
+        <img src="assets/watch.jpg" alt="Smart watch" class="hero-img float f1">
+        <img src="assets/headphones.jpg" alt="Gold headphones" class="hero-img float f2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CATEGORIES ======= -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Browse Collection</span>
+      <h2 class="section-title">Product <span>Categories</span></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- ======= SHOP / FEATURED PRODUCTS ======= -->
+<section class="section section-alt" id="shop">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Handpicked For You</span>
+      <h2 class="section-title">Featured <span>Products</span></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="audio">Audio</button>
+      <button class="filter-btn" data-filter="charging">Charging</button>
+      <button class="filter-btn" data-filter="cases">Cases</button>
+      <button class="filter-btn" data-filter="power">Power Banks</button>
+      <button class="filter-btn" data-filter="wearables">Wearables</button>
+      <button class="filter-btn" data-filter="holders">Holders</button>
+    </div>
+    <p class="search-note" id="searchNote"></p>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- ======= MEGA GOLDEN SALE / OFFERS ======= -->
+<section class="section offer-section" id="offers">
+  <div class="offer-bg"></div>
+  <div class="container">
+    <div class="offer-box reveal">
+      <div class="offer-badges">
+        <span class="offer-badge">UP TO 40% OFF</span>
+        <span class="offer-badge">FREE DELIVERY</span>
+      </div>
+      <h2 class="offer-title">MEGA <span>GOLDEN</span> SALE</h2>
+      <p class="offer-sub">Premium Accessories. Amazing Prices.</p>
+      <div class="countdown" id="countdown">
+        <div class="cd-cell"><span id="cdDays">00</span><label>Days</label></div>
+        <div class="cd-cell"><span id="cdHours">00</span><label>Hours</label></div>
+        <div class="cd-cell"><span id="cdMins">00</span><label>Mins</label></div>
+        <div class="cd-cell"><span id="cdSecs">00</span><label>Secs</label></div>
+      </div>
+      <a href="#shop" class="btn-gold">GRAB THE DEALS <i class="fa-solid fa-bolt"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= NEW ARRIVALS ======= -->
+<section class="section" id="new-arrivals">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Just Landed</span>
+      <h2 class="section-title">New <span>Arrivals</span></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="product-grid" id="newGrid"></div>
+  </div>
+</section>
+
+<!-- ======= WHY CHOOSE US ======= -->
+<section class="section section-alt" id="why-us">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">The HF Promise</span>
+      <h2 class="section-title">Why Choose <span>Us</span></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-gem"></i></div>
+        <h3>Premium Quality Products</h3>
+        <p>Every accessory is carefully selected and quality-checked to guarantee durability and performance.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-tags"></i></div>
+        <h3>Affordable Prices</h3>
+        <p>Luxury quality doesn't have to cost a fortune. Enjoy fair prices and golden deals all year round.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <h3>Fast Delivery</h3>
+        <p>Island-wide express delivery. Get your accessories delivered to your doorstep quickly and safely.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Friendly Customer Support</h3>
+        <p>Our team is always ready to help you before and after your purchase — via phone or WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ABOUT ======= -->
+<section class="section" id="about">
+  <div class="container about-container">
+    <div class="about-visual reveal">
+      <div class="about-frame">
+        <img src="assets/hero-wide.jpg" alt="HF Mobile Care luxury accessories">
+      </div>
+      <img src="assets/hf-mobile-care-logo.jpg" alt="HF MOBILE CARE official logo" class="about-logo">
+    </div>
+    <div class="about-content reveal">
+      <span class="section-tag">Our Story</span>
+      <h2 class="section-title">ABOUT <span>HF MOBILE CARE</span></h2>
+      <div class="gold-line left"></div>
+      <p class="about-text">Welcome to <strong>HF MOBILE CARE!</strong> We are passionate about providing quality mobile accessories at affordable prices. Discover stylish, reliable and modern accessories to make your mobile experience better.</p>
+      <ul class="about-list">
+        <li><i class="fa-solid fa-circle-check"></i> Genuine, quality-tested accessories</li>
+        <li><i class="fa-solid fa-circle-check"></i> Latest arrivals every week</li>
+        <li><i class="fa-solid fa-circle-check"></i> Secure ordering via WhatsApp</li>
+        <li><i class="fa-solid fa-circle-check"></i> Trusted by thousands of customers</li>
+      </ul>
+      <a href="#shop" class="btn-gold">SHOP OUR COLLECTION</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CONTACT ======= -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact <span>Us</span></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="info-card">
+          <i class="fa-solid fa-phone"></i>
+          <div><h4>Phone</h4><p>+94 77 000 0000</p></div>
+        </div>
+        <div class="info-card">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div><h4>WhatsApp</h4><p>+94 77 000 0000</p></div>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-envelope"></i>
+          <div><h4>Email</h4><p>info@hfmobilecare.lk</p></div>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><h4>Shop Address</h4><p>123 Galle Road, Colombo 03, Sri Lanka</p></div>
+        </div>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/94770000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <input type="text" id="cName" placeholder="Your Name" required>
+          <small class="err-msg"></small>
+        </div>
+        <div class="form-group">
+          <input type="email" id="cEmail" placeholder="Your Email" required>
+          <small class="err-msg"></small>
+        </div>
+        <div class="form-group">
+          <textarea id="cMsg" rows="5" placeholder="Your Message" required></textarea>
+          <small class="err-msg"></small>
+        </div>
+        <button type="submit" class="btn-gold full">SEND MESSAGE <i class="fa-solid fa-paper-plane"></i></button>
+        <p class="form-success" id="contactSuccess"><i class="fa-solid fa-circle-check"></i> Message sent! We will get back to you soon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="footer-logo">
+          <img src="assets/hf-mobile-care-logo.jpg" alt="HF MOBILE CARE Logo">
+          <span>HF <em>MOBILE CARE</em></span>
+        </a>
+        <p>Your trusted destination for premium mobile accessories. Quality, style and technology — all in one place.</p>
+        <div class="social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/94770000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#new-arrivals">New Arrivals</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#categories">Mobile Phones</a></li>
+          <li><a href="#categories">Phone Cases</a></li>
+          <li><a href="#categories">Chargers & Cables</a></li>
+          <li><a href="#categories">Earphones</a></li>
+          <li><a href="#categories">Power Banks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Support</h4>
+        <ul>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#contact">Delivery Info</a></li>
+          <li><a href="#contact">Returns & Warranty</a></li>
+          <li><a href="#contact">WhatsApp Orders</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2026 <span>HF MOBILE CARE</span>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======= CART SIDEBAR ======= -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3><i class="fa-solid fa-cart-shopping"></i> Your Cart <span class="cart-count-badge" id="cartCountBadge">0</span></h3>
+    <button class="close-cart" id="closeCart" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span>Subtotal</span><span id="cartSubtotal">LKR 0</span></div>
+    <div class="cart-total-row grand"><span>Total</span><span id="cartTotal">LKR 0</span></div>
+    <button class="btn-gold full" id="checkoutBtn"><i class="fa-solid fa-lock"></i> CHECKOUT</button>
+    <button class="btn-outline full" id="clearCartBtn"><i class="fa-solid fa-trash"></i> Clear Cart</button>
+  </div>
+</aside>
+
+<!-- ======= PRODUCT DETAILS MODAL ======= -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal product-modal">
+    <button class="modal-close" data-close="productModal"><i class="fa-solid fa-xmark"></i></button>
+    <div class="pm-body" id="pmBody"></div>
+  </div>
+</div>
+
+<!-- ======= CHECKOUT MODAL ======= -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal checkout-modal">
+    <button class="modal-close" data-close="checkoutModal"><i class="fa-solid fa-xmark"></i></button>
+    <h3 class="modal-title"><i class="fa-solid fa-credit-card"></i> Checkout</h3>
+    <div class="checkout-grid">
+      <form id="checkoutForm" novalidate>
+        <div class="form-group">
+          <label for="coName">Customer Name</label>
+          <input type="text" id="coName" placeholder="Full name" required>
+          <small class="err-msg"></small>
+        </div>
+        <div class="form-group">
+          <label for="coPhone">Phone Number</label>
+          <input type="tel" id="coPhone" placeholder="07X XXX XXXX" required>
+          <small class="err-msg"></small>
+        </div>
+        <div class="form-group">
+          <label for="coEmail">Email</label>
+          <input type="email" id="coEmail" placeholder="you@email.com" required>
+          <small class="err-msg"></small>
+        </div>
+        <div class="form-group">
+          <label for="coAddress">Delivery Address</label>
+          <textarea id="coAddress" rows="2" placeholder="Street address" required></textarea>
+          <small class="err-msg"></small>
+        </div>
+        <div class="form-group">
+          <label for="coCity">City</label>
+          <input type="text" id="coCity" placeholder="City" required>
+          <small class="err-msg"></small>
+        </div>
+      </form>
+      <div class="order-summary" id="orderSummary"></div>
+    </div>
+    <div class="checkout-actions">
+      <button class="btn-outline" id="placeOrderBtn"><i class="fa-solid fa-check"></i> Place Order</button>
+      <button class="btn-whatsapp" id="waOrderBtn"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</button>
+    </div>
+    <p class="form-success" id="orderSuccess"><i class="fa-solid fa-circle-check"></i> Order placed successfully! We will contact you shortly to confirm.</p>
+  </div>
+</div>
+
+<!-- ======= LOGIN MODAL ======= -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal login-modal">
+    <button class="modal-close" data-close="loginModal"><i class="fa-solid fa-xmark"></i></button>
+    <img src="assets/hf-mobile-care-logo.jpg" alt="HF MOBILE CARE" class="login-logo">
+    <h3 class="modal-title center">Welcome Back</h3>
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <input type="email" id="lEmail" placeholder="Email address" required>
+        <small class="err-msg"></small>
+      </div>
+      <div class="form-group">
+        <input type="password" id="lPass" placeholder="Password" required>
+        <small class="err-msg"></small>
+      </div>
+      <button type="submit" class="btn-gold full">LOGIN</button>
+      <p class="login-note">New customer? Orders can be placed without an account via WhatsApp.</p>
+    </form>
+  </div>
+</div>
+
+<!-- ======= TOAST ======= -->
+<div class="toast" id="toast"><i class="fa-solid fa-circle-check"></i> <span id="toastMsg">Added to cart!</span></div>
+
+<a href="https://wa.me/94770000000" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
